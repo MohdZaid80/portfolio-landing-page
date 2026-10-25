@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevName | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- LINK YOUR CSS HERE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header class="nav-header">
+        <div class="container nav-container">
+            <a href="#" class="logo">&lt;DevName<span>/</span>&gt;</a>
+    
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <!-- Theme Toggle Button -->
+                 <button id="soundToggle" class="btn btn-outline" aria-label="Toggle Sound" style="padding: 0.5rem 0.8rem;">
+                    <span id="soundIcon">🔊</span>
+                </button>
+                <button id="themeToggle" class="btn btn-outline" aria-label="Toggle Theme" style="padding: 0.5rem 0.8rem;">
+                    <span id="themeIcon">☀️</span>
+                </button>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Full-Stack Web Development & Creative Coding</h1>
+                <p>Building responsive web applications, custom UI components, and modern developer tools.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+            
+            <div class="terminal-mockup glass">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">bash - dev@portfolio:~</span>
+                </div>
+                <div class="terminal-input-line">
+                    <span class="prompt">guest@dev:~$</span>
+                    <input type="text" id="terminalInput" placeholder="Type a command..." autocomplete="off">
+                </div>
+                <div class="terminal-body">
+<span class="code-comment">// Initialize Developer</span>
+<span class="code-keyword">const</span> developer = {
+    name: <span class="code-string">"DevName"</span>,
+    role: <span class="code-string">"Freelance Full-Stack Developer"</span>,
+    passions: [<span class="code-string">"UI/UX"</span>, <span class="code-string">"Clean Code"</span>, <span class="code-string">"Automation"</span>],
+    status: <span class="code-string">"Open to new projects"</span>,
+    
+    sayHello() {
+        console.log(<span class="code-string">`Hi! Ready to build something great?`</span>);
+    }
+};
+
+developer.sayHello();
+<span class="code-comment">/* Output: Hi! Ready to build something great? */</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+    
+            <!-- Filter Buttons Bar -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+        
+                <!-- Project Card 1 (Frontend) -->
+                <div class="project-card glass fade-in-up delay-1" data-category="frontend">
+                    <h3>Advanced Web Calculator</h3>
+                    <p>A sophisticated custom expression parsing engine with full keyboard controls and a LocalStorage-based history log for quick mathematical references.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JS (ES6+)</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Live Demo</a>
+                        <a href="#" class="btn btn-outline">GitHub Repo</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 (Backend) -->
+                <div class="project-card glass fade-in-up delay-2" data-category="backend">
+                    <h3>Digital Heritage Platform / After+</h3>
+                    <p>An interactive culture & heritage digital archive web application designed to preserve and catalog historical artifacts with a modern UI.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Express</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">REST API</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Live Demo</a>
+                        <a href="#" class="btn btn-outline">GitHub Repo</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 (Automation) -->
+                <div class="project-card glass fade-in-up delay-3" data-category="automation">
+                    <h3>CLI & Script Automation</h3>
+                    <p>A robust collection of file management utilities and task automation scripts designed to optimize developer workflows and environment setups.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">C</span>
+                        <span class="tech-badge">Git</span>
+                        <span class="tech-badge">Shell/DOS</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">View Docs</a>
+                        <a href="#" class="btn btn-outline">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category glass">
+                    <h3>Frontend</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">HTML5</span>
+                        <span class="skill-badge">CSS3</span>
+                        <span class="skill-badge">JavaScript (ES6+)</span>
+                        <span class="skill-badge">React.js</span>
+                        <span class="skill-badge">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass">
+                    <h3>Backend & Scripting</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Express.js</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">C</span>
+                        <span class="skill-badge">RESTful APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass">
+                    <h3>Tools & Environment</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">GitHub Pages</span>
+                        <span class="skill-badge">VS Code</span>
+                        <span class="skill-badge">PowerShell / Bash</span>
+                        <span class="skill-badge">Figma</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-wrapper">
+                
+                <div class="contact-info">
+                    <h3>Have a project in mind?</h3>
+                    <p>I'm currently available for freelance work and looking for full-time opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">📧 hello@devname.com</a>
+                        <a href="#" class="social-link">🐙 github.com/devname</a>
+                        <a href="#" class="social-link">💼 linkedin.com/in/devname</a>
+                    </div>
+                </div>
+
+                <form class="contact-form glass" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Brief</label>
+                        <textarea id="message" class="form-control" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Send Message</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> &lt;DevName/&gt;. Built from scratch with Vanilla HTML/CSS/JS.</p>
+        </div>
+    </footer>
+
+    <!-- Matrix Canvas Overlay -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
